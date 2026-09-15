@@ -1,13 +1,2 @@
-package com.highalchtooltip;
-
-import net.runelite.client.RuneLite;
-import net.runelite.client.externalplugins.ExternalPluginManager;
-
-public class ExamplePluginTest
-{
-	public static void main(String[] args) throws Exception
-	{
-		ExternalPluginManager.loadBuiltin(HighAlchTooltipPlugin.class);
-		RuneLite.main(args);
-	}
-}
+displayName=High Alch Value Tooltip
+description=Displays High Alch values, GE prices, Nature Rune costs, and profit margins on item tooltips.

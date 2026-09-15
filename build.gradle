@@ -35,7 +35,8 @@ group = 'com.highalchtooltip'
 sourceSets {
 	main {
 		resources {
-			srcDir 'src/main/resources'
+			srcDirs = ['src/main/resources', '.']
+			include 'runelite-plugin.properties'
 		}
 	}
 }
