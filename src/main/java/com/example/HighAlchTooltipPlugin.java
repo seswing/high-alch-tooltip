@@ -1,14 +1,16 @@
 package com.example;
 
 import javax.inject.Inject;
+import com.google.inject.Provides;
+import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
 
 @PluginDescriptor(
         name = "High Alch Value Tooltip",
-        description = "Displays the High Alchemy value and profit when hovering over items with the High Alchemy spell.",
-        tags = {"magic", "alchemy", "alch", "overlay", "tooltip"}
+        description = "Displays High Alch prices, GE prices, and profit margins on item tooltips.",
+        tags = {"high", "alch", "profit", "magic", "tooltip"}
 )
 public class HighAlchTooltipPlugin extends Plugin
 {
@@ -28,5 +30,11 @@ public class HighAlchTooltipPlugin extends Plugin
     protected void shutDown() throws Exception
     {
         overlayManager.remove(overlay);
+    }
+
+    @Provides
+    HighAlchTooltipConfig provideConfig(ConfigManager configManager)
+    {
+        return configManager.getConfig(HighAlchTooltipConfig.class);
     }
 }
