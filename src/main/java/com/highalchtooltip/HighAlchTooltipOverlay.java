@@ -1,4 +1,4 @@
-package com.example;
+package com.highalchtooltip;
 
 import javax.inject.Inject;
 import java.awt.Color;
